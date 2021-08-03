@@ -1,6 +1,7 @@
-def hailstone(n):
+def hailstone(n: int) -> list:
     if type(n) != int:
         raise TypeError("'n' must be type int")
+
     seq = [n]
     while n > 1:
         if n % 2 == 0:
@@ -11,15 +12,13 @@ def hailstone(n):
     return seq
 
 
-def fibonacci(n):
+def fibonacci(n: int) -> list:
     if type(n) != int:
         raise TypeError("'n' must be type int")
+
     a, b = 0, 1
     seq = [a, b]
     for _ in range(n - 2):
         a, b = b, a + b
         seq.append(b)
     return seq
-
-
-print(fibonacci(50.0))
