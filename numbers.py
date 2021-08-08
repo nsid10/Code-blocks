@@ -1,0 +1,28 @@
+def fibonacci(n: int) -> list:
+    """
+    Generates sequence of fibonacci numbers
+    """
+    if type(n) != int:
+        raise TypeError("input must be type int")
+
+    seq = [0, 1]
+    for _ in range(n - 2):
+        seq.append(seq[-2] + seq[-1])
+    return seq
+
+
+def hailstone(n: int) -> list:
+    """
+    Generates sequence of hailstone numbers
+    """
+    if type(n) != int:
+        raise TypeError("input must be type int")
+
+    seq = [n]
+    while n > 1:
+        if n % 2 == 0:
+            n //= 2
+        else:
+            n = n * 3 + 1
+        seq.append(n)
+    return seq
