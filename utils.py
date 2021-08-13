@@ -3,7 +3,7 @@ def normalize(x, mode="minmax", a=None, b=None):
     Feature scaling function for normalizing data
 
     Args:
-        x (numpy.ndarray): Input data
+        x (array): Input data
         mode (str, optional): Type of normalization. Defaults to "minmax".
         a (int, optional): Lower bound in custom range. Defaults to None.
         b (int, optional): Upper bound in custom range. Defaults to None.
