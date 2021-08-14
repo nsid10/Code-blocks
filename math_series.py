@@ -18,11 +18,11 @@ def hailstone(n: int) -> list:
     if type(n) != int:
         raise TypeError("input must be type int")
 
-    seq = [n]
-    while n > 1:
+    seq = []
+    while n not in seq:
+        seq.append(n)
         if n % 2 == 0:
             n //= 2
         else:
             n = n * 3 + 1
-        seq.append(n)
     return seq
