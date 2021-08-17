@@ -75,6 +75,9 @@ def primality_Baillie_PSW(n: int) -> bool:
     """
 
     def jacobi_symbol(a: int, k: int) -> int:
+        """
+        Calculates the Jacobi symbol
+        """
         a, j = a % k, 1
         while a != 0:
             while a % 2 == 0:
